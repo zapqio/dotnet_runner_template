@@ -5,7 +5,7 @@ Punkt startowy dla repozytorium typu **.NET**, wykonywanego przez zewnętrznego
 przyjmuje imię, zapisuje log i zwraca powitanie jako JSON.
 
 Moduł używa publicznego `Zapqio.Runner.Module.Core` **1.2.0** z nuget.org. Nie wymaga
-klonowania źródeł runnera, lokalnego źródła NuGet ani Nexo. Obsługuje budowanie
+klonowania źródeł runnera ani lokalnego źródła NuGet. Obsługuje budowanie
 na runnerze i gotowe paczki z GitHub Actions.
 
 ## Szybki start
@@ -85,8 +85,6 @@ Sam Desktop Runtime służy do uruchamiania i nie zawiera kompilatora.
 
 Dla tego ogólnego modułu wystarczy systemowo zainstalowane .NET SDK i poprawne
 środowisko usługi. Jeśli SDK zainstalowano po uruchomieniu usługi, uruchom ją ponownie.
-Jeżeli na tej maszynie instalujesz także Nexo, `install-nexo.ps1 -BuildTools`
-przygotowuje dodatkowo SDK InsERT, cache i środowisko konta usługi.
 
 Na serwerze, w PowerShellu administratora, przejdź do katalogu runnera:
 
@@ -201,12 +199,6 @@ Inne biblioteki potrzebne modułowi w runtime powinny trafić do publish normaln
 Jeśli zmienisz nazwę pliku `Template.Module.csproj`, zaktualizuj odwołania projektów
 w `tools/` i `tests/` oraz polecenie publish w workflowie. Samą nazwę DLL możesz zmienić
 przez `AssemblyName`, bez zmiany tych ścieżek.
-
-## Opcjonalne Nexo
-
-Ten szablon nie instaluje Connection ani SDK InsERT. Aby utworzyć moduł korzystający
-z Nexo, przejdź przez [rozszerzenie o Nexo](docs/nexo.md). Zależności oraz przygotowanie
-serwera i CI są tam opisane osobno.
 
 ## Najczęstsze problemy
 
