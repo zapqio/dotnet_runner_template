@@ -1,0 +1,9 @@
+{
+  "formatVersion": 1,
+  "name": ".NET module",
+  "description": ".NET 8 module with tests and module.zip built by CI.",
+  "kind": "Dotnet",
+  "branch": "main",
+  "packageName": "Template.Module",
+  "buildMode": "CiZip"
+}

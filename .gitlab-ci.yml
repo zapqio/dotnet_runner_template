@@ -1,0 +1,13 @@
+stages: [build]
+
+zapqio-module:
+  stage: build
+  image: mcr.microsoft.com/dotnet/sdk:8.0
+  script:
+    - dotnet test tests/Template.Module.Tests/Template.Module.Tests.csproj -c Release --nologo
+    - dotnet publish Template.Module.csproj -c Release -o artifacts/publish --nologo
+    - cp artifacts/module.zip module.zip
+  artifacts:
+    name: zapqio-module
+    paths: [module.zip]
+    expire_in: 30 days
