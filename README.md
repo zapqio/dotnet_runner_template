@@ -1,13 +1,13 @@
-# Szablon modułu .NET dla Zapq
+# .NET module template for Zapq
 
-Moduł dla runnera zewnętrznego. Metoda `template-dotnet-hello` przyjmuje
-`{"Name":"Anna"}` i zwraca `{"Message":"Cześć, Anna!"}`.
+A module for the external runner. The `template-dotnet-hello` method accepts
+`{"Name":"Anna"}` and returns `{"Message":"Cześć, Anna!"}`.
 
-## Zacznij
+## Get started
 
-1. Wybierz **Use this template → Create a new repository** i sklonuj własne repozytorium.
-2. Zainstaluj .NET SDK 8 lub nowszy oraz runtime .NET 8 i uruchom poniższe polecenia z katalogu repozytorium.
-3. Podłącz repozytorium jako **.NET** i przejdź przez [wgrywanie modułu](https://docs.zapq.io/pl/guides/external-runner-modules).
+1. Select **Use this template → Create a new repository** and clone your repository.
+2. Install .NET SDK 8 or later and the .NET 8 runtime, then run the commands below from the repository root.
+3. Connect the repository as **.NET** and follow the [module deployment guide](https://docs.zapq.io/guides/external-runner-modules).
 
 ```sh
 dotnet test tests/Template.Module.Tests/Template.Module.Tests.csproj -c Release
@@ -15,12 +15,12 @@ dotnet run --project tools/LocalRunner/LocalRunner.csproj -- examples/input.json
 dotnet publish Template.Module.csproj -c Release -o artifacts/publish
 ```
 
-Paczka powstaje w `artifacts/module.zip`. Program lokalny nie łączy się z Zapq.
-CI przygotowuje artefakt; instalacja na runnerze wymaga osobnego zatwierdzenia.
+The package is created at `artifacts/module.zip`. The local runner does not connect to Zapq.
+CI prepares the artifact; installation on the runner requires separate approval.
 
-## Dokumentacja
+## Documentation
 
-- [Tworzenie modułów .NET](https://docs.zapq.io/pl/technical/dotnet-modules#module-template): szablon, własne metody, nazwy, testy, pakowanie i CI.
-- [Moduły runnera zewnętrznego](https://docs.zapq.io/pl/guides/external-runner-modules): wgranie, zatwierdzenie, aktualizacja i wycofanie.
+- [Developing .NET modules](https://docs.zapq.io/technical/dotnet-modules#module-template): the template, custom methods, naming, tests, packaging, and CI.
+- [External runner modules](https://docs.zapq.io/guides/external-runner-modules): deployment, approval, updates, and withdrawal.
 
-Licencja: [Apache-2.0](LICENSE).
+License: [Apache-2.0](LICENSE).
